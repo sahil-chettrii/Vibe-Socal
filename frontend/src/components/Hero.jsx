@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom'
 import { ArrowRight, Play, ShieldCheck, Users, Laptop } from 'lucide-react'
 import HeroMockup from './HeroMockup'
+
 export default function Hero() {
   return (
     <section id="home" className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 lg:grid-cols-2 lg:py-24">
@@ -23,12 +25,12 @@ export default function Hero() {
 
         {/* Buttons */}
         <div className="mt-8 flex flex-wrap gap-3">
-          <a
-            href="/signup"
+          <Link
+            to="/signup"
             className="inline-flex items-center gap-2 rounded-xl bg-brand px-5 py-3 text-sm font-semibold text-white shadow-md shadow-brand/25 hover:brightness-110"
           >
             Get Started Free <ArrowRight size={16} />
-          </a>
+          </Link>
           <a
             href="/app"
             className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold hover:bg-slate-50"
@@ -45,7 +47,7 @@ export default function Hero() {
         </ul>
       </div>
 
-      {/* Right side: phone mockups (next step) */}
+      {/* Right side: phone mockups */}
       <HeroMockup />
 
     </section>

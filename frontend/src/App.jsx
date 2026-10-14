@@ -1,16 +1,14 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Features from './components/Features'
-import AppPreview from './components/AppPreview'
-import Footer from './components/Footer'
+import { Routes, Route } from 'react-router-dom'
+import Landing from './pages/Landing'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
+
 export default function App() {
   return (
-    <>
-      <Navbar />
-      <Hero/>
-      <Features/>
-      <AppPreview/>
-      <Footer/>
-    </>
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
+    </Routes>
   )
 }
